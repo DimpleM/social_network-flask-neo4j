@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form action="{{ url_for('add_post') }}" method="post" enctype="multipart/form-data">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Post</legend>
+                <dt>Title:</dt>
+                <dd><input type="text" name="title"></dd>
+                <dt>Content:</dt>
+                <dd><input type="text" name="content"></dd>
+                <dt>Image:</dt>
+                <dd><input type="file" name = "image" /></dd>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
